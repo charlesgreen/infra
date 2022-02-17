@@ -4,7 +4,7 @@ terraform {
     hostname     = "app.terraform.io"
 
     workspaces {
-      tags = ["infra-dev"]
+      tags = ["dev"]
     }
   }
 }

@@ -4,7 +4,7 @@
 resource "google_cloudbuild_trigger" "push_firebase_base_image" {
   name = "push-firebase-base-image"
   github {
-    owner = "simplycubed"
+    owner = "simplyhey"
     name  = "firebase"
     push {
       branch = "^main$"
@@ -20,7 +20,7 @@ resource "google_cloudbuild_trigger" "push_firebase_base_image" {
 resource "google_cloudbuild_trigger" "push_node_base_image" {
   name = "push-node-base-image"
   github {
-    owner = "simplycubed"
+    owner = "simplyhey"
     name  = "node"
     push {
       branch = "^main$"
@@ -31,13 +31,13 @@ resource "google_cloudbuild_trigger" "push_node_base_image" {
 }
 
 #
-# simplycubed-web
+# web
 #
-resource "google_cloudbuild_trigger" "deploy_simplyhey_web" {
-  name = "deploy-simplyhey-web"
+resource "google_cloudbuild_trigger" "deploy_web" {
+  name = "deploy-web"
   github {
-    owner = "simplycubed"
-    name  = "simplyhey-web"
+    owner = "simplyhey"
+    name  = "web"
     push {
       branch = "^main$"
     }
@@ -54,11 +54,11 @@ resource "google_cloudbuild_trigger" "deploy_simplyhey_web" {
   tags     = ["managed by terraform"]
 }
 
-resource "google_cloudbuild_trigger" "build_simplyhey_web" {
-  name = "build-simplyhey-web"
+resource "google_cloudbuild_trigger" "build_web" {
+  name = "build-web"
   github {
-    owner = "simplycubed"
-    name  = "simplyhey-web"
+    owner = "simplyhey"
+    name  = "web"
     pull_request {
       branch = ".*"
     }
