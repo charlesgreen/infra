@@ -2,10 +2,6 @@ variable "base_domain" {
   description = "Base domain for DNS records"
 }
 
-variable "google_domainkey" {
-  description = "Google Domain Key - DKIM"
-}
-
 variable "project_id" {
   description = "Project ID"
 }
