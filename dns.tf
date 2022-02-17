@@ -26,11 +26,11 @@ module "dns" {
       type = "MX"
       ttl  = 300
       records = [
-        "10 aspmx.l.google.com.",
-        "50 aspmx3.googlemail.com.",
-        "40 aspmx2.googlemail.com.",
-        "30 alt2.aspmx.l.google.com.",
-        "20 alt1.aspmx.l.google.com.",
+        "1 aspmx.l.google.com.",
+        "5 alt1.aspmx.l.google.com.",
+        "5 alt2.aspmx.l.google.com.",
+        "10 alt3.aspmx.l.google.com.",
+        "10 alt4.aspmx.l.google.com."
       ]
     },
     {
@@ -44,6 +44,14 @@ module "dns" {
     {
       name = ""
       type = "TXT"
+      ttl  = 300
+      records = [
+        "\"v=spf1 include:_spf.google.com include:_spf.firebasemail.com include:sendgrid.net ~all\""
+      ]
+    },
+    {
+      name = ""
+      type = "SPF"
       ttl  = 300
       records = [
         "\"v=spf1 include:_spf.google.com include:_spf.firebasemail.com include:sendgrid.net ~all\""

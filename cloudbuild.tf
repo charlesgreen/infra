@@ -15,6 +15,22 @@ resource "google_cloudbuild_trigger" "push_firebase_base_image" {
 }
 
 #
+# golang
+#
+resource "google_cloudbuild_trigger" "push_golang_base_image" {
+  name = "push-golang-base-image"
+  github {
+    owner = "simplyhey"
+    name  = "golang"
+    push {
+      branch = "^main$"
+    }
+  }
+  filename = "cloudbuild.yaml"
+  tags     = ["managed by terraform"]
+}
+
+#
 # node
 #
 resource "google_cloudbuild_trigger" "push_node_base_image" {

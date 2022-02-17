@@ -12,10 +12,10 @@
 #
 
 # DEV
-export PROJECT_NAME="simplyhey-dev"
-export ORGANIZATION_ID="1013393027722"
-export BILLING_ACCOUNT_ID="false"
-export CREATE_SERVICE_ACCOUNT_KEY="true"
+# export PROJECT_NAME="simplyhey-dev"
+# export ORGANIZATION_ID="1013393027722"
+# export BILLING_ACCOUNT_ID="false"
+# export CREATE_SERVICE_ACCOUNT_KEY="true"
 
 # PROD
 # export PROJECT_NAME="simplyhey-prod"
