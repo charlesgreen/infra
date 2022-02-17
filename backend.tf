@@ -1,10 +1,10 @@
 terraform {
   cloud {
-    organization = "simplycubed"
+    organization = "simplyhey"
     hostname     = "app.terraform.io"
 
     workspaces {
-      tags = ["simplycubed-infra"]
+      tags = ["simplyhey-infra"]
     }
   }
 }

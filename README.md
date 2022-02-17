@@ -8,12 +8,12 @@ This project contains the Terraform configuration for GCP including an init scri
 - Create a Terraform Cloud Workspace to manage the GCP project
 - Install gcloud CLI and login to the GCP Project
 - Login with gcloud `gcloud auth login`
-- Prod - `gcloud config set project simplycubed-fcbc1`
+- Prod - `gcloud config set project simplyhey-${ENV}`
 - Execute the following init script
 
 ```bash
 # ./init.sh $PROJECT_NAME $ORGANIZATION_ID $BILLING_ACCOUNT_ID $CREATE_SERVICE_ACCOUNT_KEY $SUPPORT_EMAIL
-./init.sh simplycubed-fcbc1 691565555817 false false support@simplycubed.com
+./init.sh simplyhey-${ENV} 691565555817 false false support@simplyhey.com
 ```
 
 - Terraform service account will be generated with access *key.json*.
@@ -53,10 +53,10 @@ ns-cloud-*.googledomains.com.
 
 | Key  | Value |
 |---|---|
-| project_id | simplycubed-fcbc1 |
+| project_id | simplyhey-${ENV} |
 | region | us-central1 |
 | credentials | SENSITIVE |
-| base_domain | devopsui.dev or devopsui.com |
+| base_domain | simplyhey.dev or simplyhey.com |
 
 ## Resources
 

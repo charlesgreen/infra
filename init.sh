@@ -11,14 +11,19 @@
 # gcloud alpha billing accounts list --filter=open=true
 #
 
-# simplycubed-fcbc1
-# export PROJECT_NAME="simplycubed-fcbc1"
+# DEV
+export PROJECT_NAME="simplyhey-dev"
+export ORGANIZATION_ID="1013393027722"
+export BILLING_ACCOUNT_ID="false"
+export CREATE_SERVICE_ACCOUNT_KEY="true"
+
+# PROD
+# export PROJECT_NAME="simplyhey-prod"
 # export ORGANIZATION_ID="1013393027722"
 # export BILLING_ACCOUNT_ID="false"
 # export CREATE_SERVICE_ACCOUNT_KEY="true"
-# export SUPPORT_EMAIL="support@simplycubed.com"
 
-# ./init.sh $PROJECT_NAME $ORGANIZATION_ID $BILLING_ACCOUNT_ID $CREATE_SERVICE_ACCOUNT_KEY $SUPPORT_EMAIL
+# ./init.sh $PROJECT_NAME $ORGANIZATION_ID $BILLING_ACCOUNT_ID $CREATE_SERVICE_ACCOUNT_KEY
 #
 # Initial execution set CREATE_SERVICE_ACCOUNT_KEY to "true" however subsequent runs to "false"
 
@@ -34,7 +39,6 @@ PROJECT_NAME=$1
 ORGANIZATION_ID=$2
 BILLING_ACCOUNT_ID=$3
 CREATE_SERVICE_ACCOUNT_KEY=$4
-SUPPORT_EMAIL=$5
 
 echo ""
 echo "Preparing Terraform resources and service account with the following values:"
@@ -43,7 +47,6 @@ echo "PROJECT_NAME: $PROJECT_NAME"
 echo "ORGANIZATION_ID: $ORGANIZATION_ID"
 echo "BILLING_ACCOUNT_ID: $BILLING_ACCOUNT_ID"
 echo "CREATE_SERVICE_ACCOUNT_KEY: $CREATE_SERVICE_ACCOUNT_KEY"
-echo "SUPPORT_EMAIL: $SUPPORT_EMAIL"
 echo "==================================================="
 echo ""
 echo "Continuing in 5 seconds. Ctrl+C to cancel"

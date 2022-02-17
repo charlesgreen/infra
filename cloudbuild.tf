@@ -33,11 +33,11 @@ resource "google_cloudbuild_trigger" "push_node_base_image" {
 #
 # simplycubed-web
 #
-resource "google_cloudbuild_trigger" "deploy_simplycubed_web" {
-  name = "deploy-simplycubed-web"
+resource "google_cloudbuild_trigger" "deploy_simplyhey_web" {
+  name = "deploy-simplyhey-web"
   github {
     owner = "simplycubed"
-    name  = "simplycubed-web"
+    name  = "simplyhey-web"
     push {
       branch = "^main$"
     }
@@ -54,11 +54,11 @@ resource "google_cloudbuild_trigger" "deploy_simplycubed_web" {
   tags     = ["managed by terraform"]
 }
 
-resource "google_cloudbuild_trigger" "build_simplycubed_web" {
-  name = "build-simplycubed-web"
+resource "google_cloudbuild_trigger" "build_simplyhey_web" {
+  name = "build-simplyhey-web"
   github {
     owner = "simplycubed"
-    name  = "simplycubed-web"
+    name  = "simplyhey-web"
     pull_request {
       branch = ".*"
     }
@@ -74,4 +74,3 @@ resource "google_cloudbuild_trigger" "build_simplycubed_web" {
   filename = "cloudbuild.pr.yaml"
   tags     = ["managed by terraform"]
 }
-
