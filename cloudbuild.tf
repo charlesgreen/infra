@@ -4,7 +4,7 @@
 resource "google_cloudbuild_trigger" "push_firebase_base_image" {
   name = "push-firebase-base-image"
   github {
-    owner = "simplyhey"
+    owner = "charlesgreen"
     name  = "firebase"
     push {
       branch = "^main$"
@@ -20,7 +20,7 @@ resource "google_cloudbuild_trigger" "push_firebase_base_image" {
 resource "google_cloudbuild_trigger" "push_golang_base_image" {
   name = "push-golang-base-image"
   github {
-    owner = "simplyhey"
+    owner = "charlesgreen"
     name  = "golang"
     push {
       branch = "^main$"
@@ -36,7 +36,7 @@ resource "google_cloudbuild_trigger" "push_golang_base_image" {
 resource "google_cloudbuild_trigger" "push_node_base_image" {
   name = "push-node-base-image"
   github {
-    owner = "simplyhey"
+    owner = "charlesgreen"
     name  = "node"
     push {
       branch = "^main$"
@@ -52,7 +52,7 @@ resource "google_cloudbuild_trigger" "push_node_base_image" {
 resource "google_cloudbuild_trigger" "deploy_web" {
   name = "deploy-web"
   github {
-    owner = "simplyhey"
+    owner = "charlesgreen"
     name  = "web"
     push {
       branch = "^main$"
@@ -73,7 +73,7 @@ resource "google_cloudbuild_trigger" "deploy_web" {
 resource "google_cloudbuild_trigger" "build_web" {
   name = "build-web"
   github {
-    owner = "simplyhey"
+    owner = "charlesgreen"
     name  = "web"
     pull_request {
       branch = ".*"

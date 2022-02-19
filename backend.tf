@@ -1,10 +1,10 @@
 terraform {
   cloud {
-    organization = "simplyhey"
+    organization = "charlesgreen"
     hostname     = "app.terraform.io"
 
     workspaces {
-      tags = ["dev"]
+      tags = ["dev", "prod"]
     }
   }
 }
