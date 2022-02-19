@@ -38,7 +38,8 @@ module "dns" {
       type = "TXT"
       ttl  = 300
       records = [
-        "\"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoWuaYBkXd7ad+Onk68625A0X2jbRoorD3YMDs2CrE7eU0x122/PakAUZKJkCDdyyFnwdmZnOrSRMilChYTmEi/fSL//InqZAk/gjIAj3tcs4PN2HupJsH5qz654Q6nvhR/mIQVlZxfJxFexDGJaGlvW8pjLq80JaGgb9I4WuIRP1CKB74Y+xc/cz5Q7EqeX4I\" \"k7SZsWhvPP1PycH/ZBpXn0iaHlaY2sPer3QPdOeAiKw5Mn6PkjekivmDYDWOrazWBKVupaRDo6JlVQf2d1rqd1hWs23mwVQeFsrbv1FTf2Lf0QR0uGXt9OjkvgX3JZyadldMsFbx7l0HxS3Gsls+wIDAQAB\""
+        "\"v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCSQD70OQFtP0sBMXMJeS3g240/6HTvnxNBFdRNcXEkRTacv/yUo4JvkpbRo4JmxBbDwytlgRnDcMtqRd7iDc3XXZKh4ABzPGA+7imSCnc2hdbosStSYo+mAsfW0fssGnd84kwichH1btLhcHGrv2NF8HJjNlpYebgaUF1XbVlx2QIDAQAB\"",
+        "\"keybase-site-verification=cXZgwWV_Lwf9_RHVXtl33X5jWlCHI3KbvcNHOx7_Ts8\""
       ]
     },
     {

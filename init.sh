@@ -12,14 +12,14 @@
 #
 
 # DEV
-# export PROJECT_NAME="simplyhey-dev"
-# export ORGANIZATION_ID="1013393027722"
+# export PROJECT_NAME="charlesgreen-dev"
+# export ORGANIZATION_ID="691565555817"
 # export BILLING_ACCOUNT_ID="false"
 # export CREATE_SERVICE_ACCOUNT_KEY="true"
 
 # PROD
-# export PROJECT_NAME="simplyhey-prod"
-# export ORGANIZATION_ID="1013393027722"
+# export PROJECT_NAME="charlesgreen-prod"
+# export ORGANIZATION_ID="691565555817"
 # export BILLING_ACCOUNT_ID="false"
 # export CREATE_SERVICE_ACCOUNT_KEY="true"
 
@@ -80,6 +80,7 @@ gcloud --project $project_id services enable compute.googleapis.com
 gcloud --project $project_id services enable container.googleapis.com
 gcloud --project $project_id services enable dns.googleapis.com
 gcloud --project $project_id services enable iam.googleapis.com
+gcloud --project $project_id services enable run.googleapis.com
 gcloud --project $project_id services enable secretmanager.googleapis.com
 gcloud --project $project_id services enable servicecontrol.googleapis.com
 gcloud --project $project_id services enable servicemanagement.googleapis.com
