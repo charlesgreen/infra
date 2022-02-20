@@ -31,6 +31,22 @@ resource "google_cloudbuild_trigger" "push_golang_base_image" {
 }
 
 #
+# hugo
+#
+resource "google_cloudbuild_trigger" "push_hugo_base_image" {
+  name = "push-hugo-base-image"
+  github {
+    owner = "charlesgreen"
+    name  = "hugo"
+    push {
+      branch = "^main$"
+    }
+  }
+  filename = "cloudbuild.yaml"
+  tags     = ["managed by terraform"]
+}
+
+#
 # node
 #
 resource "google_cloudbuild_trigger" "push_node_base_image" {
