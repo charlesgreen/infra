@@ -71,10 +71,12 @@ resource "google_cloudbuild_trigger" "deploy_web" {
     owner = "charlesgreen"
     name  = "web"
     push {
-      branch = "^main$"
+      tag    = var.env == "prod" ? "^production-v\\d+\\.\\d+\\.\\d+$" : null
+      branch = var.env == "dev" ? "^main$" : null
     }
   }
   substitutions = {
+    _ENV                          = var.env
     _FIREBASE_API_KEY             = var.firebase_api_key
     _FIREBASE_APP_ID              = var.firebase_app_id
     _FIREBASE_AUTH_DOMAIN         = var.firebase_auth_domain
@@ -87,7 +89,8 @@ resource "google_cloudbuild_trigger" "deploy_web" {
 }
 
 resource "google_cloudbuild_trigger" "build_web" {
-  name = "build-web"
+  count = var.env == "prod" ? 0 : 1
+  name  = "build-web"
   github {
     owner = "charlesgreen"
     name  = "web"
@@ -96,6 +99,7 @@ resource "google_cloudbuild_trigger" "build_web" {
     }
   }
   substitutions = {
+    _ENV                          = var.env
     _FIREBASE_API_KEY             = var.firebase_api_key
     _FIREBASE_APP_ID              = var.firebase_app_id
     _FIREBASE_AUTH_DOMAIN         = var.firebase_auth_domain
