@@ -2,7 +2,7 @@ module "dns" {
   source     = "terraform-google-modules/cloud-dns/google"
   type       = "public"
   project_id = var.project_id
-  name       = "simplyhey-dns"
+  name       = "site-dns"
   domain     = "${var.base_domain}."
   recordsets = [
     {
