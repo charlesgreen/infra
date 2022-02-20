@@ -84,7 +84,7 @@ resource "google_cloudbuild_trigger" "deploy_web" {
     _FIREBASE_MESSAGING_SENDER_ID = var.firebase_messaging_sender_id
     _FIREBASE_STORAGE_BUCKET      = var.firebase_storage_bucket
   }
-  filename = "cloudbuild.main.yaml"
+  filename = var.env == "prod" ? "cloudbuild.prod.yaml" : "cloudbuild.dev.yaml"
   tags     = ["managed by terraform"]
 }
 
