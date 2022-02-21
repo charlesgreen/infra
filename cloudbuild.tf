@@ -71,8 +71,9 @@ resource "google_cloudbuild_trigger" "deploy_web" {
     owner = "charlesgreen"
     name  = "web"
     push {
-      tag    = var.env == "prod" ? "^production-v\\d+\\.\\d+\\.\\d+$" : null
-      branch = var.env == "dev" ? "^main$" : null
+      # tag    = var.env == "prod" ? "^production-v\\d+\\.\\d+\\.\\d+$" : null
+      # branch = var.env == "dev" ? "^main$" : null
+      branch = var.env == "prod" ? "^main$" : "^dev$"
     }
   }
   substitutions = {
